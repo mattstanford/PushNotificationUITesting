@@ -17,6 +17,9 @@ class MockServer {
     var server = HttpServer()
     var pushToken: String?
     
+    /*
+        Start up the server and configure hadnling of the device token endpoint
+    */
     func setUp() {
         do {
             try server.start(8080)
@@ -26,15 +29,22 @@ class MockServer {
         }
     }
     
+    /*
+        Remember to call this to shut down your server when the test ends
+    */
     func tearDown() {
         server.stop()
     }
     
+    /*
+        This configures the mock server to handle the push notification endpoint
+     */
     private func setupPushTokenEndpoint() {
         
         let response: ((HttpRequest) -> HttpResponse) = { [weak self] request in
             
-            guard let json = self?.getJson(from: request),
+            guard let serializedObject = try? JSONSerialization.jsonObject(with: Data(request.body), options: []),
+                let json = serializedObject as? JSON,
                 let token = json["deviceToken"] as? String else {
                 return HttpResponse.badRequest(nil)
             }
@@ -48,17 +58,6 @@ class MockServer {
         }
         
         server.POST[UITestingConstants.pushEndpoint] = response
-        server.PUT[UITestingConstants.pushEndpoint] = response
-        server.GET[UITestingConstants.pushEndpoint] = response
-
-    }
-    
-    private func getJson(from request: HttpRequest) -> JSON? {
-        if let json = try? JSONSerialization.jsonObject(with: Data(request.body), options: []) as? JSON {
-            return json
-        } else {
-            return nil
-        }
     }
 }
 

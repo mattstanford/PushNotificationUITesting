@@ -11,7 +11,7 @@ target 'PushNotificationUITesting' do
     inherit! :search_paths
     
     pod 'NWPusher'
-    pod 'Swifter'
+    pod 'Swifter', '~> 1.4.5'
     
   end
 

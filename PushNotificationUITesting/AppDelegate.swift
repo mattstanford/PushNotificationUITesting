@@ -34,8 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func sendPushTokenToServer(token: String) {
-        // server endpoint
-       // let endpoint = "https://app.stickerkit.io/userEvent/v1/\(user.projectID)"
         let endpoint = "http://localhost:8080\(UITestingConstants.pushEndpoint)"
         
         guard let endpointUrl = URL(string: endpoint) else {
@@ -53,9 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var request = URLRequest(url: endpointUrl)
         request.httpMethod = "POST"
         request.httpBody = data
-     //   request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-      //  request.addValue("application/json", forHTTPHeaderField: "Accept")
-        
+   
         let task = URLSession.shared.dataTask(with: request)
         task.resume()
         
