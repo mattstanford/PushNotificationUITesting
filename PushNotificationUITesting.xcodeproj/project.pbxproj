@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9F044A08D0FDDD13AAFCA66D /* Pods_PushNotificationUITesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E4568428B81267CA878EE15 /* Pods_PushNotificationUITesting.framework */; };
 		ADDF5D7552D6EBE7B45CEB90 /* Pods_PushNotificationUITestingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2650A23A6E55BAF10C2A73BE /* Pods_PushNotificationUITestingUITests.framework */; };
+		C92F171921929A0300BF9A4B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C92F171821929A0300BF9A4B /* README.md */; };
 		C94AEF18213C650B00F625AE /* MockServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94AEF17213C650B00F625AE /* MockServer.swift */; };
 		C94AEF1A213C676800F625AE /* UITestingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94AEF19213C676800F625AE /* UITestingConstants.swift */; };
 		C94AEF1B213C679500F625AE /* UITestingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94AEF19213C676800F625AE /* UITestingConstants.swift */; };
@@ -39,6 +40,7 @@
 		9CAF61A2C3600C27C38FCE5F /* Pods-PushNotificationUITesting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PushNotificationUITesting.release.xcconfig"; path = "Pods/Target Support Files/Pods-PushNotificationUITesting/Pods-PushNotificationUITesting.release.xcconfig"; sourceTree = "<group>"; };
 		AB494DC1A7AA5964857BFAFF /* Pods-PushNotificationUITestingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PushNotificationUITestingUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PushNotificationUITestingUITests/Pods-PushNotificationUITestingUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C7C8AA87E5CCF4A823C4F3E6 /* Pods-PushNotificationUITestingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PushNotificationUITestingUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PushNotificationUITestingUITests/Pods-PushNotificationUITestingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C92F171821929A0300BF9A4B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		C94AEF17213C650B00F625AE /* MockServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServer.swift; sourceTree = "<group>"; };
 		C94AEF19213C676800F625AE /* UITestingConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestingConstants.swift; sourceTree = "<group>"; };
 		C94AEF1C213C73D600F625AE /* PushNotificationPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationPayload.swift; sourceTree = "<group>"; };
@@ -120,12 +122,13 @@
 			isa = PBXGroup;
 			children = (
 				C9B46E6F213C5EDD00C6DC03 /* PushNotificationUITesting.entitlements */,
+				C92F171821929A0300BF9A4B /* README.md */,
+				C9B96AA0213C59850052E027 /* Info.plist */,
 				C9B96A91213C59820052E027 /* AppDelegate.swift */,
 				C9B96A93213C59820052E027 /* ViewController.swift */,
-				C9B96A95213C59820052E027 /* Main.storyboard */,
 				C9B96A9B213C59850052E027 /* Assets.xcassets */,
 				C9B96A9D213C59850052E027 /* LaunchScreen.storyboard */,
-				C9B96AA0213C59850052E027 /* Info.plist */,
+				C9B96A95213C59820052E027 /* Main.storyboard */,
 			);
 			path = PushNotificationUITesting;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			files = (
 				C9B96A9F213C59850052E027 /* LaunchScreen.storyboard in Resources */,
 				C9B96A9C213C59850052E027 /* Assets.xcassets in Resources */,
+				C92F171921929A0300BF9A4B /* README.md in Resources */,
 				C9B96A97213C59820052E027 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
